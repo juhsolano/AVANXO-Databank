@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>BANCO MUNDIAL DADOS</title>
@@ -18,16 +17,20 @@
         <h2>Para pessoa escolher dados(?)</h2>
         <main class="show-options">
           <h3>Iniciar o filtro</h3>
-          <section class="country-options">
-            <label>País</label>
-            <input type="checkbox" class="check-option" name="brasil" />
-            <label for="brasil">Brasil</label>
-            <input type="checkbox" class="check-option" name="mexico" />
-            <label for="mexico">México</label>
-            <input type="checkbox" class="check-option" name="peru" />
-            <label for="peru">Peru</label> 
+          <section class="country-options" id="chosen-country">
+            <label>País</label> <br>
+            <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile"/>
+            <label for="CHL">Chile</label>
+            <input type="checkbox" class="check-option" name="country" value="BRA" id="chosen-brasil"/>
+            <label for="BRA">Brasil</label>
+            <input type="checkbox" class="check-option" name="country" value="MEX"id="chosen-mexico"/>
+            <label for="MEX">México</label>
+            <input type="checkbox" class="check-option" name="country" value="PER" id="chosen-peru"/>
+            <label for="PER">Peru</label> 
+            <!-- apenas teste -->
+            <div id="myChosenCountry"></div>
           </section>
-          <section class="year-option">
+         <!-- <section class="year-option">
               <label>Ano</label>
               <input type="checkbox" class="check-option" name="2012" />
               <label for="2012">2012</label>
@@ -44,15 +47,20 @@
             </section>
           <section class="indicators-options">
             <label>Indicadores</label>
-            <input type="radio" class="check-option" id="gender-option" name="indicator-option" value="gender"/>
+            <select name="select-indicators">
+              <option value="indicator-1">Indicador 1</option> 
+              <option value="indicator-2" selected>Indicador 2</option>
+              <option value="indicator-3">Indicador 3</option>
+            </select> -->
+            <!-- <input type="radio" class="check-option" id="gender-option" name="indicator-option" value="gender"/>
             <label for="gender-option">Indicadores de Gênero</label>
             <input type="radio" class="check-option" id="education-option" name="indicator-option" value="education" />
             <label for="education-option">Indicadores de Educação</label>
             <input type="radio" class="check-option" id="work-option" name="indicator-option" value="work" />
             <label for="work-option">Indicadores de Educação</label>
-            <button class="indicator-choice">Escolho este!</button>
+            <button class="indicator-choice">Escolho este!</button> -->
           </section>
-          <button class="data-processing">Processar TUDO(!)</button>
+          <button class="data-processing" id="data-processing">Processar TUDO(!)</button>
         </main>
       </form>
     </main>
@@ -62,5 +70,4 @@
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>
