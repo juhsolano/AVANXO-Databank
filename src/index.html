@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="data/injuries/injuries.js"></script> -->
-    <!-- <script src="data/lol/lol.js"></script> -->
-    <!-- <script src="data/patient/patient.js"></script> -->
-    <!-- <script src="data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
-    <!-- <script src="data/steam/steam.js"></script> -->
-    <!-- <script src="data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>BANCO MUNDIAL DADOS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>BANCO MUNDIAL DADOS</h1>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> -->
+  </header>
+  <section>
+    <main>
+      <form>
+        <h2>Para pessoa escolher dados(?)</h2>
+        <main class="show-options">
+          <h3>Iniciar o filtro</h3>
+          <section class="country-options" id="chosen-country">
+            <label>País</label> <br>
+            <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile"/>
+            <label for="CHL">Chile</label>
+            <input type="checkbox" class="check-option" name="country" value="BRA" id="chosen-brasil"/>
+            <label for="BRA">Brasil</label>
+            <input type="checkbox" class="check-option" name="country" value="MEX"id="chosen-mexico"/>
+            <label for="MEX">México</label>
+            <input type="checkbox" class="check-option" name="country" value="PER" id="chosen-peru"/>
+            <label for="PER">Peru</label> 
+            <!-- apenas teste -->
+            <div id="myChosenCountry"></div>
+          </section>
+          <!-- <section class="year-option">
+              <label>Ano</label>
+              <input type="checkbox" class="check-option" name="2012" />
+              <label for="2012">2012</label>
+              <input type="checkbox" class="check-option" name="2013" />
+              <label for="2013">2013</label>
+              <input type="checkbox" class="check-option" name="2014" />
+              <label for="2014">2014</label>
+              <input type="checkbox" class="check-option" name="2015" />
+              <label for="2015">2015</label>
+              <input type="checkbox" class="check-option" name="2016" />
+              <label for="2016">2016</label>
+              <input type="checkbox" class="check-option" name="2017" />
+              <label for="2017">2017</label>
+            </section>
+          <section class="indicators-options">
+            <label>Indicadores</label>
+            <select name="select-indicators">
+              <option value="indicator-1">Indicador 1</option> 
+              <option value="indicator-2" selected>Indicador 2</option>
+              <option value="indicator-3">Indicador 3</option>
+            </select> -->
+            <!-- <input type="radio" class="check-option" id="gender-option" name="indicator-option" value="gender"/>
+            <label for="gender-option">Indicadores de Gênero</label>
+            <input type="radio" class="check-option" id="education-option" name="indicator-option" value="education" />
+            <label for="education-option">Indicadores de Educação</label>
+            <input type="radio" class="check-option" id="work-option" name="indicator-option" value="work" />
+            <label for="work-option">Indicadores de Educação</label>
+            <button class="indicator-choice">Escolho este!</button> -->
+          </section>
+          <button class="data-processing" id="data-processing">Processar TUDO(!)</button>
+        </main>
+      </form>
+    </main>
+  </section>
+  <div id="root"></div>
+  <script src="data/worldbank/worldbank.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
