@@ -1,0 +1,54 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*HEADER - texto + logo*/
+.main-header{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    padding: 2%;
+}
+
+.logo-america {
+    width: 40px;
+    height: 40px;
+}
+
+/*SECTIONS DOS INPUTS*/
+.show-options {
+    display: flex;
+    align-content: center;
+}
+
+.country-options {
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2%;
+
+}
+
+.country-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.indicators-options {
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2%;
+}
+
+.year-options {
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2%;
+}
