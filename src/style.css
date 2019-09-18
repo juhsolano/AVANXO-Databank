@@ -7,48 +7,109 @@
     outline: none;
     font-weight: 300;
     box-sizing: border-box;
+}
+/*Atributos gerais*/
+body{
     font-family: 'PT Sans', sans-serif;
 }
 
 /*HEADER - texto + logo*/
 .main-header{
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 200%;
-    text-align: center;
-    padding: 2%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    justify-content: center;
+
 }
 
-.logo-america {
-    width: 40px;
-    height: 40px;
+.logo-text {
+    background-color: yellowgreen;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 280%;
+}
+
+.logo-america{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    margin: 1.5%;
 }
 
 /*SECTIONS DOS INPUTS*/
 .show-options {
+    background-color: chartreuse;
+    width: 90%;
+    margin: auto;
     display: flex;
-    align-content: center;
+    align-content: space-around;
 }
 
 .country-options {
+    background-color: blue;
     border: 1px solid black;
-    padding: 2%;
+    display: flex;
+    flex-flow: column;
     margin: 2%;
+    flex: 1;
 
 }
 
 .country-icon {
+    background-color: darkmagenta;
     width: 20px;
     height: 20px;
 }
 
+.country-title{
+    font-size: 110%;
+}
+
 .indicators-options {
+    background-color: darkorange;
     border: 1px solid black;
-    padding: 2%;
     margin: 2%;
+    flex: 3;
+    align-items: center;
+    
+}
+
+.select-bar{
+    width: 90%;
+    margin: auto;
+}
+
+.select-bar-container {
+    align-items: center;
 }
 
 .year-options {
+    background-color: darkturquoise;
     border: 1px solid black;
     padding: 2%;
     margin: 2%;
+    flex: 1;
+}
+
+/* BOTÃO PROCESSAMENTO */
+.data-processing {
+    background-color:red;
+    width: 120px;
+    height: 20px;
+    font-size: 90%;
+    border-radius: 5px;
+        
+}
+
+.print-area {
+    background-color: deeppink;
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+.result-text {
+    flex-flow: column;
 }
