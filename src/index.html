@@ -15,56 +15,63 @@
   <header class="main-header">
     <img src="icons/america-do-sul.png" class="logo-america" alt="Mapa America latina">
     <h1 class="logo-text">BANCO MUNDIAL DADOS</h1>
-  </header>  
+  </header>
   <main class="content">
     <article class="about-us">QUEM SOMOS</article>
     <form>
       <h2>Explorar dados</h2>
       <main class="show-options">
         <section class="country-options" id="chosen-country">
-            <div class="countries-card" id="chl-card"><label>País</label><br>          
-              <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile"/>
-              <label class="country-title"for="CHL">Chile</label>
-              <img src="icons/chile.png" class="country-icon" alt="Bandeira do Chile">
-            </div>
-            <div class="countries-card" id="bra-card">
-              <input type="checkbox" class="check-option" name="country" value="BRA" id="chosen-brasil"/>
-              <label class="country-title"for="BRA">Brasil</label>
-              <img src="icons/brasil.png" class="country-icon" alt="Bandeira do Brasil">
-            </div>
-            <div class="countries-card" id="mex-card">         
-              <input type="checkbox" class="check-option" name="country" value="MEX" id="chosen-mexico"/>
-              <label class="country-title" for="MEX">México</label>
-              <img src="icons/mexico.png" class="country-icon" alt="Bandeira do México">
-            </div>
-            <div class="countries-card" id="per-card">     
-              <input type="checkbox" class="check-option" name="country" value="PER" id="chosen-peru"/>
-              <label class="country-title"for="PER">Peru</label>
-              <img src="icons/peru.png" class="country-icon" alt="Bandeira do Peru">
-            </div>
+          <div class="countries-card" id="chl-card"><label>País</label><br>
+            <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile" />
+            <label class="country-title" for="CHL">Chile</label>
+            <img src="icons/chile.png" class="country-icon" alt="Bandeira do Chile">
+          </div>
+          <div class="countries-card" id="bra-card">
+            <input type="checkbox" class="check-option" name="country" value="BRA" id="chosen-brasil" />
+            <label class="country-title" for="BRA">Brasil</label>
+            <img src="icons/brasil.png" class="country-icon" alt="Bandeira do Brasil">
+          </div>
+          <div class="countries-card" id="mex-card">
+            <input type="checkbox" class="check-option" name="country" value="MEX" id="chosen-mexico" />
+            <label class="country-title" for="MEX">México</label>
+            <img src="icons/mexico.png" class="country-icon" alt="Bandeira do México">
+          </div>
+          <div class="countries-card" id="per-card">
+            <input type="checkbox" class="check-option" name="country" value="PER" id="chosen-peru" />
+            <label class="country-title" for="PER">Peru</label>
+            <img src="icons/peru.png" class="country-icon" alt="Bandeira do Peru">
+          </div>
         </section>
         <section class="indicators-options">
           <label>Indicadores</label><br>
-              <select class="select-bar" name="select-indicators">
-                  <option value="none">Opções</option>
-                  <option value="SL.TLF.CACT.FM.NE.ZS">Proporção de participação na força laboral de mulheres e homens(%)</option>
-                  <option value="SL.TLF.BASC.ZS">Força laboral com educação básica (% do total)</option>
-                  <option value="SL.TLF.BASC.MA.ZS">Força laboral com educação básica - homens (% da força laboral masc.)</option>
-                  <option value="SL.TLF.BASC.FE.ZS">Força laboral com educação básica - mulheres (% da força laboral fem.)</option>
-                  <option value="SL.TLF.INTM.ZS">Força laboral com educação intermediária (% de total)</option>
-                  <option value="SL.TLF.INTM.MA.ZS">Força laboral com educação intermediária - homens (% da força laboral masc.)</option>
-                  <option value="SL.TLF.INTM.FE.ZS">Força laboral com educação intermediária - mulheres (% da força laboral fem.)</option>
-                  <option value="SL.TLF.ADVN.ZS">Força laboral com educação superior (% de total)</option>
-                  <option value="SL.TLF.ADVN.MA.ZS">Força laboral com educação superior - homens (% da força laboral masc.)</option>
-                  <option value="SL.TLF.ADVN.FE.ZS">Força laboral com educação superior - mulheres (% da força laboral fem.)</option>
-                  <option value="SL.UEM.TOTL.NE.ZS">Desemprego total (% de participação total na força laboral)</option>
-                  <option value="SL.UEM.TOTL.MA.NE.ZS">Desemprego, homens (% participação masc. na força laboral) </option>
-                  <option value="SL.UEM.TOTL.FE.NE.ZS">Desemprego, mulheres (% participação fem. na força laboral)</option>
-                  <option value="SL.UEM.BASC.FE.ZS" >Mulheres desempregadas com educação básica</option>
-                  <option value="SL.UEM.INTM.FE.ZS">Mulheres desempregadas com educação intermediária</option>
-                  <option value="SL.UEM.ADVN.FE.ZS">Mulheres desempregadas com educação superior</option>
-              </select>
-              </section>
+          <select class="select-bar" id="select-indicators">
+            <option value="none">Opções</option>
+            <option value="SL.TLF.CACT.FM.NE.ZS">Proporção de participação na força laboral de mulheres e homens(%)
+            </option>
+            <option value="SL.TLF.BASC.ZS">Força laboral com educação básica (% do total)</option>
+            <option value="SL.TLF.BASC.MA.ZS">Força laboral com educação básica - homens (% da força laboral masc.)
+            </option>
+            <option value="SL.TLF.BASC.FE.ZS">Força laboral com educação básica - mulheres (% da força laboral fem.)
+            </option>
+            <option value="SL.TLF.INTM.ZS">Força laboral com educação intermediária (% de total)</option>
+            <option value="SL.TLF.INTM.MA.ZS">Força laboral com educação intermediária - homens (% da força laboral
+              masc.)</option>
+            <option value="SL.TLF.INTM.FE.ZS">Força laboral com educação intermediária - mulheres (% da força laboral
+              fem.)</option>
+            <option value="SL.TLF.ADVN.ZS">Força laboral com educação superior (% de total)</option>
+            <option value="SL.TLF.ADVN.MA.ZS">Força laboral com educação superior - homens (% da força laboral masc.)
+            </option>
+            <option value="SL.TLF.ADVN.FE.ZS">Força laboral com educação superior - mulheres (% da força laboral fem.)
+            </option>
+            <option value="SL.UEM.TOTL.NE.ZS">Desemprego total (% de participação total na força laboral)</option>
+            <option value="SL.UEM.TOTL.MA.NE.ZS">Desemprego, homens (% participação masc. na força laboral) </option>
+            <option value="SL.UEM.TOTL.FE.NE.ZS">Desemprego, mulheres (% participação fem. na força laboral)</option>
+            <option value="SL.UEM.BASC.FE.ZS">Mulheres desempregadas com educação básica</option>
+            <option value="SL.UEM.INTM.FE.ZS">Mulheres desempregadas com educação intermediária</option>
+            <option value="SL.UEM.ADVN.FE.ZS">Mulheres desempregadas com educação superior</option>
+          </select>
+        </section>
         <section class="year-options">
           <label>Ano</label><br>
           <input type="checkbox" class="check-option" name="2012" />
@@ -80,7 +87,7 @@
           <input type="checkbox" class="check-option" name="2017" />
           <label for="2017">2017</label>
         </section>
-        </main>
+      </main>
       <button class="data-processing" id="data-processing">Processar dados</button>
     </form>
     <section class="print-area">
