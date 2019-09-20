@@ -22,7 +22,7 @@
       <h2>Explorar dados</h2>
       <main class="show-options">
         <section class="country-options" id="chosen-country">
-          <div class="countries-card" id="chl-card"><label>País</label><br>
+          <div class="countries-card" id="chl-card"><label class="card-title">País</label><br>
             <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile" />
             <label class="country-title" for="CHL">Chile</label>
             <img src="icons/chile.png" class="country-icon" alt="Bandeira do Chile">
@@ -44,8 +44,8 @@
           </div>
         </section>
         <section class="indicators-options">
-          <label>Indicadores</label><br>
-          <select class="select-bar" id="select-indicators">
+          <label class="card-title">Indicadores</label><br>
+          <select class="select-bar" id="select-indicators" name="select-indicators">
             <option value="none">Opções</option>
             <option value="SL.TLF.CACT.FM.NE.ZS">Proporção de participação na força laboral de mulheres e homens(%)
             </option>
@@ -72,20 +72,20 @@
             <option value="SL.UEM.ADVN.FE.ZS">Mulheres desempregadas com educação superior</option>
           </select>
         </section>
-        <section class="year-options">
-          <label>Ano</label><br>
-          <input type="checkbox" class="check-option" name="2012" />
-          <label for="2012">2012</label>
-          <input type="checkbox" class="check-option" name="2013" />
-          <label for="2013">2013</label>
-          <input type="checkbox" class="check-option" name="2014" />
-          <label for="2014">2014</label>
-          <input type="checkbox" class="check-option" name="2015" />
-          <label for="2015">2015</label>
-          <input type="checkbox" class="check-option" name="2016" />
-          <label for="2016">2016</label>
-          <input type="checkbox" class="check-option" name="2017" />
-          <label for="2017">2017</label>
+        <section class="year-options" name="year">
+          <label class="card-title">Ano</label><br>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2012" />
+            <label for="2012">2012</label></div>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2013" />
+            <label for="2013">2013</label></div>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2014" />
+            <label for="2014">2014</label></div>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2015" />
+            <label for="2015">2015</label></div>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2016" />
+            <label for="2016">2016</label></div>
+          <div class="year-card"><input type="checkbox" class="check-option" name="2017" />
+            <label for="2017">2017</label></div>
         </section>
       </main>
       <button class="data-processing" id="data-processing">Processar dados</button>
