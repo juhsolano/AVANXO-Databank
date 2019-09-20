@@ -28,7 +28,7 @@ body{
 .logo-text {
     background-color: yellowgreen;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 280%;
+    font-size: 200%;
 }
 
 .logo-america{
@@ -38,21 +38,48 @@ body{
     margin: 1.5%;
 }
 
+/*INTRO - ABOUT US*/
+.about-us {
+    background-color: aqua;
+    font-family: 'Fjalla One', sans-serif;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+}
+
+h2 {
+    background-color: darkorchid;
+    font-family: 'Fjalla One', sans-serif;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    
+}
+
+/*CARDS HEADER*/
+.card-title {
+    background-color: blueviolet;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 120%;
+
+}
+
 /*SECTIONS DOS INPUTS*/
 .show-options {
     background-color: chartreuse;
     width: 90%;
     margin: auto;
     display: flex;
+    /* flex-direction: column; */
     align-content: space-around;
 }
 
 .country-options {
     background-color: blue;
-    border: 1px solid black;
     display: flex;
     flex-flow: column;
     margin: 2%;
+    padding: 2%;
     flex: 1;
 
 }
@@ -64,16 +91,17 @@ body{
 }
 
 .country-title{
+    background-color: darkred;
     font-size: 110%;
+    align-items: center;
 }
 
 .indicators-options {
     background-color: darkorange;
-    border: 1px solid black;
     margin: 2%;
     flex: 3;
-    align-items: center;
-    
+    padding: 2% 0.5% 2% 2%;
+
 }
 
 .select-bar{
@@ -81,13 +109,8 @@ body{
     margin: auto;
 }
 
-.select-bar-container {
-    align-items: center;
-}
-
 .year-options {
     background-color: darkturquoise;
-    border: 1px solid black;
     padding: 2%;
     margin: 2%;
     flex: 1;
@@ -113,3 +136,22 @@ body{
 .result-text {
     flex-flow: column;
 }
+
+@media (min-midth: 360px){
+    .show-options{
+          flex-direction: column;
+    }
+}
+
+
+
+/* @media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
