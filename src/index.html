@@ -23,22 +23,22 @@
       <main class="show-options">
         <section class="country-options" id="chosen-country">
           <div class="countries-card" id="chl-card"><label class="card-title">País</label><br>
-            <input type="checkbox" class="check-option" name="country" value="CHL" id="chosen-chile" />
+            <input type="checkbox" class="check-option" name="select-country" value="CHL" />
             <label class="country-title" for="CHL">Chile</label>
             <img src="icons/chile.png" class="country-icon" alt="Bandeira do Chile">
           </div>
           <div class="countries-card" id="bra-card">
-            <input type="checkbox" class="check-option" name="country" value="BRA" id="chosen-brasil" />
+            <input type="checkbox" class="check-option" name="select-country" value="BRA" />
             <label class="country-title" for="BRA">Brasil</label>
             <img src="icons/brasil.png" class="country-icon" alt="Bandeira do Brasil">
           </div>
           <div class="countries-card" id="mex-card">
-            <input type="checkbox" class="check-option" name="country" value="MEX" id="chosen-mexico" />
+            <input type="checkbox" class="check-option" name="select-country" value="MEX" />
             <label class="country-title" for="MEX">México</label>
             <img src="icons/mexico.png" class="country-icon" alt="Bandeira do México">
           </div>
           <div class="countries-card" id="per-card">
-            <input type="checkbox" class="check-option" name="country" value="PER" id="chosen-peru" />
+            <input type="checkbox" class="check-option" name="select-country" value="PER" />
             <label class="country-title" for="PER">Peru</label>
             <img src="icons/peru.png" class="country-icon" alt="Bandeira do Peru">
           </div>
@@ -72,20 +72,32 @@
             <option value="SL.UEM.ADVN.FE.ZS">Mulheres desempregadas com educação superior</option>
           </select>
         </section>
-        <section class="year-options" name="year">
+        <section class="year-options">
           <label class="card-title">Ano</label><br>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2012" />
-            <label for="2012">2012</label></div>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2013" />
-            <label for="2013">2013</label></div>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2014" />
-            <label for="2014">2014</label></div>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2015" />
-            <label for="2015">2015</label></div>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2016" />
-            <label for="2016">2016</label></div>
-          <div class="year-card"><input type="checkbox" class="check-option" name="2017" />
-            <label for="2017">2017</label></div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2012" />
+            <label for="2012">2012</label>
+          </div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2013" />
+            <label for="2013">2013</label>
+          </div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2014" />
+            <label for="2014">2014</label>
+          </div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2015" />
+            <label for="2015">2015</label>
+          </div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2016" />
+            <label for="2016">2016</label>
+          </div>
+          <div class="year-card">
+            <input type="checkbox" class="check-option" name="select-year" value="2017" />
+            <label for="2017">2017</label>
+          </div>
         </section>
       </main>
       <button class="data-processing" id="data-processing">Processar dados</button>
@@ -94,7 +106,6 @@
       <div class="result-text" id="myChosenCountry"></div>
     </section>
   </main>
-  <div id="root"></div>
   <script src="data/worldbank/worldbank.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
