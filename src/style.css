@@ -70,7 +70,7 @@ h2 {
     width: 90%;
     margin: auto;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-content: space-around;
 }
 
@@ -137,13 +137,15 @@ h2 {
     flex-flow: column;
 }
 
-@media (min-midth: 360px){
+@media screen and (min-midth: 360px){
     .show-options{
-          flex-direction: column;
+        flex-direction: column;
+    }
+    .about-us {
+        font-size: 100%;
+        color: black;
     }
 }
-
-
 
 /* @media (min-width: 576px) { ... }
 
