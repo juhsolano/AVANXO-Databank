@@ -5,7 +5,7 @@
     font-size: 100%;
     border: none;
     outline: none;
-    font-weight: 300;
+    font-weight: 400;
     box-sizing: border-box;
 }
 /*Atributos gerais*/
@@ -15,24 +15,21 @@ body{
 
 /*HEADER - texto + logo*/
 .main-header{
-    background-color: blueviolet;
+    background-color:#8EBFB4;
     display: flex;
     align-items: center;
     width: 90%;
-    height: 10vh;
+    height: 30%;
     margin: auto;
     justify-content: center;
-
 }
 
 .logo-text {
-    background-color: yellowgreen;
     font-family: 'Fjalla One', sans-serif;
     font-size: 200%;
 }
 
 .logo-america{
-    background-color: aqua;
     width: 50px;
     height: 50px;
     margin: 1.5%;
@@ -40,7 +37,7 @@ body{
 
 /*INTRO - ABOUT US*/
 .about-us {
-    background-color: aqua;
+    background-color: #49736A;
     font-family: 'Fjalla One', sans-serif;
     width: 90%;
     margin: auto;
@@ -48,7 +45,7 @@ body{
 }
 
 h2 {
-    background-color: darkorchid;
+    background-color:#C2AE8C;
     font-family: 'Fjalla One', sans-serif;
     width: 90%;
     margin: auto;
@@ -58,7 +55,6 @@ h2 {
 
 /*CARDS HEADER*/
 .card-title {
-    background-color: blueviolet;
     font-family: 'Fjalla One', sans-serif;
     font-size: 120%;
 
@@ -66,7 +62,7 @@ h2 {
 
 /*SECTIONS DOS INPUTS*/
 .show-options {
-    background-color: chartreuse;
+    background-color:#C2AE8C;
     width: 90%;
     margin: auto;
     display: flex;
@@ -75,7 +71,8 @@ h2 {
 }
 
 .country-options {
-    background-color: blue;
+    background-color:#8EBFB4;
+    border-radius: 10px;
     display: flex;
     flex-flow: column;
     margin: 2%;
@@ -85,19 +82,19 @@ h2 {
 }
 
 .country-icon {
-    background-color: darkmagenta;
+    background-color: #8EBFB4;
     width: 20px;
     height: 20px;
 }
 
 .country-title{
-    background-color: darkred;
     font-size: 110%;
     align-items: center;
 }
 
 .indicators-options {
-    background-color: darkorange;
+    background-color: #8EBFB4;
+    border-radius: 10px;
     margin: 2%;
     flex: 3;
     padding: 2% 0.5% 2% 2%;
@@ -110,43 +107,78 @@ h2 {
 }
 
 .year-options {
-    background-color: darkturquoise;
+    background-color: #8EBFB4;
+    border-radius: 10px;
     padding: 2%;
     margin: 2%;
     flex: 1;
 }
 
 /* BOTÃO PROCESSAMENTO */
+#button-container{
+    background-color: #C2AE8C;
+    display: flex;
+    width: 90%;
+    margin: auto;
+
+}
+
 .data-processing {
-    background-color:red;
-    width: 120px;
+    background-color: #49736A;
+    font-family: 'Fjalla One', sans-serif;
+    width: 110px;
     height: 20px;
     font-size: 90%;
     border-radius: 5px;
-        
+            
 }
 
+/*AREA DO RESULTADO*/
 .print-area {
-    background-color: deeppink;
+    background-color: #C2AE8C;
     width: 90%;
+    height: 200px;
+    padding: 2px;
     display: flex;
     margin: auto;
 }
 
 .result-text {
-    flex-flow: column;
+    background-color:#8EBFB4 ;
+    width:90%;
+    margin: auto;
+
 }
 
-@media screen and (min-midth: 360px){
+@media only screen and (min-width: 576px){
     .show-options{
-        flex-direction: column;
-    }
-    .about-us {
-        font-size: 100%;
-        color: black;
+        flex-direction: row;
     }
 }
 
+@media only screen and (min-width: 992px){
+    .logo-text{
+        font-size: 300%;
+    }
+
+    .card-title{
+        font-size: 130%;
+    }
+
+    h2{
+        font-size: 150%;
+    }
+
+    .about-us{
+        font-size: 150%;
+    }
+
+    .data-processing{
+        font-size: 120%;
+        width: 130px;
+        height: 30px;
+    }
+}
 /* @media (min-width: 576px) { ... }
 
 // Medium devices (tablets, 768px and up)
