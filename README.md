@@ -38,6 +38,16 @@
    Nesse ponto a informação exibida na tela já é sucinta e clara, mostrando somente o que é relevante para o usuário.
 
 ## 4. Protótipo de baixa fidelidade
+   A partir das protopersonas e do banco de dados escolhido fizemos exercícios de brainstorm para cria o layout ideal. 
+
+   Para criar um dashboard, precisamos de cards para mostrar as informações de maneira clara e campos para o usuário interagir com os dados (inputs - checkbox e select).
+
+   Esses foram os primeiros rascunhos, e na última imagem o resultado unindo as ideias mais relevantes.
+   
+   ![](/src/img/Prototipo2.jpg)
+
+   ![](/src/img/Prototipo1.jpg)
+
 
 ## 5. Teste e feedbacks de usabilidade
 
