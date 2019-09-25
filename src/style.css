@@ -39,7 +39,6 @@ body{
 .about-us {
     background-color: #49736A;
     font-family: 'Fjalla One', sans-serif;
-    width: 90%;
     margin: auto;
     padding: 2%;
 }
@@ -47,7 +46,6 @@ body{
 h2 {
     background-color:#C2AE8C;
     font-family: 'Fjalla One', sans-serif;
-    width: 90%;
     margin: auto;
     padding: 2%;
     
@@ -61,9 +59,14 @@ h2 {
 }
 
 /*SECTIONS DOS INPUTS*/
-.show-options {
-    background-color:#C2AE8C;
+.content {
+    background-color: #C2AE8C;
     width: 90%;
+    margin: auto;
+}
+
+.show-options {
+    
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -119,9 +122,11 @@ h2 {
 #button-container{
     background-color: #C2AE8C;
     display: flex;
+    padding: 10px;
     width: 90%;
     margin: auto;
     justify-content: center;
+    
 
 }
 
@@ -137,9 +142,6 @@ h2 {
 
 /*AREA DO RESULTADO*/
 .print-area {
-    background-color: #C2AE8C;
-    width: 90%;
-    height: 200px;
     padding: 1px;
     display: flex;
     margin: auto;
