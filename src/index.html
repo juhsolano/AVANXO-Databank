@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BANCO MUNDIAL DADOS</title>
+  <title>BANCO MUNDIAL DE DADOS</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap">
   <link rel="icon" type="img/png" href="icons/america-do-sul.png">
@@ -14,7 +14,7 @@
 <body>
   <header class="main-header">
     <img src="icons/america-do-sul.png" class="logo-america" alt="Mapa America latina">
-    <h1 class="logo-text">BANCO MUNDIAL DADOS</h1>
+    <h1 class="logo-text">BANCO MUNDIAL DE DADOS</h1>
   </header>
   <main class="content">
     <article class="about-us">QUEM SOMOS</article>
@@ -100,10 +100,30 @@
           </div>
         </section>
       </main>
-      <div id="button-container"><button class="data-processing" id="data-processing">Processar dados</button></div>
+      <div id="button-container">
+        <button class="data-processing" id="data-processing">Processar dados</button>
+      </div>
     </form>
     <section class="print-area">
       <div class="result-text" id="myChosenCountry"></div>
+    </section>
+    <section class="sort-area">
+    <div id="calculus-container">
+      <label class="calculus-title" for="select-sort">Ordenar as informações:</label>
+      <select class="select-bar2" id="select-sort" name="select-sort">
+        <option value="none">Opções</option>
+        <option value="crescent">Ordem crescente</option>
+        <option value="decrescent">Ordem decrescente</option>
+      </select>
+    </div>
+    <div id="calculus-container">
+      <label class="calculus-title" for="select-calculus">Cálculos agregados:</label>
+      <select class="select-bar2" id="select-calculus" name="select-calculus">
+        <option value="none">Opções</option>
+        <option value="media">Média BLABLABLA</option>
+        <option value="sum">SOMA SEILA</option>
+      </select>
+    </div>
     </section>
   </main>
   <script src="data/worldbank/worldbank.js"></script>
