@@ -3,33 +3,31 @@ function processingInput() {
   const chosenCountry = document.getElementsByName("select-country");
   const chosenIndicator = document.getElementById("select-indicators");
   const chosenYears = document.getElementsByName("select-year");
-  const processedData = window.data.filterInfo(chosenCountry, chosenIndicator, chosenYears);
+  return filterInfo(chosenCountry, chosenIndicator, chosenYears);
 }
 document.getElementById("data-processing").addEventListener("click", processingInput);
 
-window.data = {
-  filterInfo: filterInfo
-};
-
-function filterInfo(chosenCountry, chosenIndicator, chosenYears, printing) {
+function filterInfo(chosenCountry, chosenIndicator, chosenYears) {
   const checkboxOptions = Array.from(chosenCountry);
   const checkboxYear = Array.from(chosenYears);
   const checkedCountry = checkboxOptions.filter(i => i.checked === true).map(i => i.value);
   const checkedYear = checkboxYear.filter(i => i.checked === true).map(i => i.value);
-  const indicatorForCountry = checkedCountry.map(country => {
-    return WORLDBANK[country].indicators.filter(i => i.indicatorCode.includes(chosenIndicator.value));
-  });
-  const dataProcessed = document.getElementById("data-processed");
-  dataProcessed.innerHTML += `
-   ${indicatorForCountry.map(pais => {
-    return `<div>
-             <p>${pais[0].countryName}</p>
-             <p>${pais[0].indicatorName}</p>
-             <p>${checkedYear.map(ano => `${ano} : ${pais[0].data[ano]}`)}</p>
-           </div > `
-  }).join("")}
- `
-  //Processo lógico usando array
+  const indicatorForCountry = window.data.userChoiceMap(checkedCountry, WORLDBANK, chosenIndicator);
+  return showResults(indicatorForCountry);
+  
+  function showResults(arrayData) {
+    let dataProcessed = document.getElementById("data-processed");
+    dataProcessed.innerHTML += `
+  ${arrayData.map(pais => {
+    return `<div class="result">
+           <p>${pais[0].countryName}</p>
+           <p>${pais[0].indicatorName}</p>
+           <p>${checkedYear.map(ano => `${ano} : ${pais[0].data[ano]}<br>`).join("")}</p>
+         </div > `;
+  }).join("")}`;
+  };
+
+//Processo lógico usando array
   //   const dataProcessed = document.getElementById("data-processed");
   //   dataProcessed.innerHTML += `
   //    ${indicatorForCountry.map(pais => pais.map(i => {
