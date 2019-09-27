@@ -17,7 +17,8 @@ function filterInfo(chosenCountry, chosenIndicator, chosenYears) {
   const checkboxYear = Array.from(chosenYears);
   const checkedCountry = window.data.takingValueFromArray(checkboxOptions);
   const checkedYear = window.data.takingValueFromArray(checkboxYear);
-  const indicatorForCountry = window.data.userChoiceMap(checkedCountry, WORLDBANK, chosenIndicator);
+  const indicatorForCountry = window.data.userChoiceMap(checkedCountry, WORLDBANK, chosenIndicator.value);
+  console.log(indicatorForCountry);
   return showResults(indicatorForCountry, checkedYear);
 };
 
