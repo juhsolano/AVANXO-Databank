@@ -7,35 +7,29 @@ function processingInput() {
 }
 document.getElementById("data-processing").addEventListener("click", processingInput);
 
+function resetData() {
+  location.reload();
+}
+document.getElementById("reset-data").addEventListener("click", resetData);
+
 function filterInfo(chosenCountry, chosenIndicator, chosenYears) {
   const checkboxOptions = Array.from(chosenCountry);
   const checkboxYear = Array.from(chosenYears);
-  const checkedCountry = checkboxOptions.filter(i => i.checked === true).map(i => i.value);
-  const checkedYear = checkboxYear.filter(i => i.checked === true).map(i => i.value);
+  const checkedCountry = window.data.takingValueFromArray(checkboxOptions);
+  const checkedYear = window.data.takingValueFromArray(checkboxYear);
   const indicatorForCountry = window.data.userChoiceMap(checkedCountry, WORLDBANK, chosenIndicator);
-  return showResults(indicatorForCountry);
-  
-  function showResults(arrayData) {
-    let dataProcessed = document.getElementById("data-processed");
-    dataProcessed.innerHTML += `
-  ${arrayData.map(pais => {
-    return `<div class="result">
-           <p>${pais[0].countryName}</p>
-           <p>${pais[0].indicatorName}</p>
-           <p>${checkedYear.map(ano => `${ano} : ${pais[0].data[ano]}<br>`).join("")}</p>
-         </div > `;
-  }).join("")}`;
-  };
-
-//Processo lógico usando array
-  //   const dataProcessed = document.getElementById("data-processed");
-  //   dataProcessed.innerHTML += `
-  //    ${indicatorForCountry.map(pais => pais.map(i => {
-  //     return `<div>
-  //              <p>${i.countryName}</p>
-  //              <p>${i.indicatorName}</p>
-  //              <p>${checkedYear.map(ano => Object.entries(i.data).filter(i => i[0] === ano)).map(i => i.map(j => j[0] + ": " + j[1]))}</p>
-  //            </div > `
-  //   })).join("")}
-  //  `
+  return showResults(indicatorForCountry, checkedYear);
 };
+
+function showResults(arrayData, arrayYears) {
+  let dataProcessed = document.getElementById("data-processed");
+  dataProcessed.innerHTML += `
+    ${arrayData.map(country => {
+    return `<div class="result">
+             <p>${country[0].countryName}</p>
+             <p>${country[0].indicatorName}</p>
+             <p>${arrayYears.map(year => `${year} : ${country[0].data[year]}<br>`).join("")}</p>
+           </div > `;
+  }).join("")}`;
+};
+
