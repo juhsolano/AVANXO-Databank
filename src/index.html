@@ -121,10 +121,13 @@
         <label class="calculus-title" for="select-calculus">Cálculos agregados:</label>
         <select class="select-bar2" id="select-calculus" name="select-calculus">
           <option value="none">Opções</option>
-          <option value="media">Média BLABLABLA</option>
-          <option value="sum">SOMA SEILA</option>
+          <option value="mean" id="mean">Média por país</option>
+          <option value="sum" id="sum">Média por indicador</option>
         </select>
       </div>
+    </section>
+    <section class="print-area">
+      <div class="result-text" id="result-calculation"></div>
     </section>
   </main>
   <script src="data/worldbank/worldbank.js"></script>

@@ -82,7 +82,7 @@ describe("function filter", () => {
 
   it("filter indicator", () => {
     expect(window.data.userChoiceMap(
-      [ "PER", "MEX" ],
+      ["PER", "MEX"],
       worldBankFake,
       "SH.ANM.ALLW.ZS"
     )).toEqual([[], [
@@ -105,3 +105,24 @@ describe("function filter", () => {
     ]]);
   });
 });
+
+describe("function average", () => {
+  it("is a function", () => {
+    expect(typeof window.data.average).toBe("function");
+  });
+
+  it("average calculation", () => {
+    expect(window.data.average(
+      [
+        [35.7182006835938, 35.2925987243652, 35.3931999206543],
+        [45.6665992736816, 35.907398223877, 36.1731986999512]
+      ]
+    )).toEqual([35.46799977620443, 39.24906539916993]);
+  });
+});
+
+// describe("function taking values from array", () => {
+//   it("is a function", () => {
+//     expect(typeof window.data.takingValueFromArray).toBe("function");
+//   });
+// });
