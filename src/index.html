@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BANCO MUNDIAL DE DADOS</title>
+  <title>AVANXO DATABANK</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap">
   <link rel="icon" type="img/png" href="icons/america-do-sul.png">
@@ -14,12 +14,17 @@
 <body>
   <header class="main-header">
     <img src="icons/america-do-sul.png" class="logo-america" alt="Mapa America latina">
-    <h1 class="logo-text">BANCO MUNDIAL DE DADOS</h1>
+    <h1 class="logo-text">AVANXO DATABANK</h1>
   </header>
   <main class="content">
-    <article class="about-us">QUEM SOMOS</article>
+    <article class="about-us">
+      <p class="aboutus-title">QUEM SOMOS</p>
+      <p class="aboutus-text">
+        A Avanxo é uma iniciativa que busca mapear a situação laboral na América Latina. Através de pesquisas em diversos países, criamos um banco de dados aberto que traz indicadores sociais, especificamente relacionados ao mercado de trabalho. Dessa maneira, buscamos facilitar e incentivar a aproximação de países investidores que queiram entrar no mercado latino americano.
+      </p>
+    </article>
     <form>
-      <h2>Explorar dados</h2>
+      <h2>EXPLORAR DADOS</h2>
       <main class="show-options">
         <section class="country-options" id="chosen-country">
           <div class="countries-card" id="chl-card"><label class="card-title">País</label><br>
@@ -108,28 +113,33 @@
     <section class="print-area">
       <div class="result-text" id="data-processed"></div>
     </section>
-    <section class="sort-area">
-      <div class="calculus-container">
+    <!-- <section class="sort-area"> -->
+    <!-- <div class="calculus-container">
         <label class="calculus-title" for="select-sort">Ordenar as informações:</label>
         <select class="select-bar2" id="select-sort" name="select-sort">
           <option value="none">Opções</option>
           <option value="crescent">Ordem crescente</option>
           <option value="decrescent">Ordem decrescente</option>
         </select>
-      </div>
-      <div class="calculus-container">
-        <label class="calculus-title" for="select-calculus">Cálculos agregados:</label>
-        <select class="select-bar2" id="select-calculus" name="select-calculus">
-          <option value="none">Opções</option>
-          <option value="mean" id="mean">Média por país</option>
-          <option value="sum" id="sum">Média por indicador</option>
-        </select>
-      </div>
-    </section>
+      </div> -->
+    <!-- </section> -->
+    <h2>CÁLCULO AGREGADO</h2>
     <section class="print-area">
       <div class="result-text" id="result-calculation"></div>
     </section>
+    </div>
   </main>
+  <footer class="main-footer">
+    <div class="socialnet-container">
+      <p class="home-local">HOME | CONTATO | LOCALIZAÇÃO</p><br>
+      <h3>Siga o Avanxo nas redes sociais</h3>
+      <div class="icon-container">
+        <img src="icons/facebook.png" class="social-icon" alt="Logo do Facebook">
+        <img src="icons/instagram.png" class="social-icon" alt="Logo do Instagram">
+        <img src="icons/twitter.png" class="social-icon" alt="Logo do Twitter">
+      </div>
+    </div>
+  </footer>
   <script src="data/worldbank/worldbank.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
