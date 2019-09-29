@@ -14,23 +14,20 @@ document.getElementById("reset-data").addEventListener("click", resetData);
 //------------------------------------------------------------------------------------------------------
 function filterInfo(chosenCountry, chosenIndicator, chosenYears) {
   const checkboxOptions = Array.from(chosenCountry);
-  console.log(checkboxOptions);
   const checkboxYear = Array.from(chosenYears);
-  console.log(checkboxYear);
   const checkedCountry = window.data.takingValueFromArray(checkboxOptions);
-  console.log(checkedCountry);
   const checkedYear = window.data.takingValueFromArray(checkboxYear);
-  console.log(checkedYear);
   const indicatorForCountry = window.data.userChoiceMap(checkedCountry, WORLDBANK, chosenIndicator.value);
   const values = window.data.takingValues(indicatorForCountry, checkedYear);
   const dataCalculations = window.data.average(values);
   showResults(indicatorForCountry, checkedYear);
   showCalculations(indicatorForCountry, dataCalculations);
+  console.log(showCalculations);
 };
 //------------------------------------------------------------------------------------------------------
 function showResults(arrayData, arrayYears) {
   let dataProcessed = document.getElementById("data-processed");
-  dataProcessed.innerHTML += `
+  dataProcessed.innerHTML = `
     ${arrayData.map(country => {
     return `<div class="result">
              <p>${country[0].countryName}</p>
@@ -40,29 +37,16 @@ function showResults(arrayData, arrayYears) {
   }).join("")}`;
 };
 //------------------------------------------------------------------------------------------------------
-
-function showCalculations(arrayData, result) {
+function showCalculations(arrayData, arrayResult) {
   let calculations = document.getElementById("result-calculation");
-  calculations.innerHTML += `
-  ${arrayData.map(country => {
-    return `<div class="result">
-    <p>${country[0].countryName}</p>
-    <p>${result.join("<br>")}</p>
-    </div > `;
+  const arrayCountry = arrayData.map(country => country[0].countryName);
+  const arrayValues = arrayCountry.map((country, value) => {
+    return { key1: country, key2: arrayResult[value] };
+  });
+  calculations.innerHTML = `<p>Valores médios por país para o período selecionado: </p><br>
+    ${arrayValues.map(myKeys => {
+    return `<div class = "result">
+            <p>${myKeys.key1}: ${myKeys.key2}</p>
+            </div>`;
   }).join("")}`;
 };
-//------------------------------------------------------------------------------------------------------
-// function showCalculations(arrayData, result) {
-//   let calculations = document.getElementById("result-calculation");
-//   calculations.innerHTML += `<div class="result">
-//     <p>O valor médio do indicador para o período selecionado foi de: ${result}</p>`;
-// };
-// function showCalculations(arrayData, result) {
-//   let calculations = document.getElementById("result-calculation");
-//   calculations.innerHTML += `
-//                                   ${arrayData.map(country => {
-//     return `<div class="result">
-//                                             <p>O valor médio do indicador para ${country[0].countryName} no período selecionado foi de: ${result.map(any => any).join("")}</p>
-//                                          </div > `;
-//   }).join("")}`;
-// };
