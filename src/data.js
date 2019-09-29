@@ -24,10 +24,5 @@ function average(arrayValues) {
   const countryLength = arrayValues.map(indivialArray => indivialArray.length);
   const calculus = anyCountry.map(indivialArray => indivialArray.reduce(((acc, cur) => acc += cur), 0) / countryLength[0]);
   return calculus;
-
-  // function average(arrayValues) {
-  //   const flatArrays = arrayValues.flat();
-  //   const reducingArray = flatArrays.reduce(((acc, cur) => acc += cur), 0);
-  //   return Math.round(reducingArray / flatArrays.length);
-  // }
 };
+
