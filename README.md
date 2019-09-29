@@ -51,6 +51,16 @@
 
 ## 5. Teste e feedbacks de usabilidade
 
+Problemas encontrados:
+
+1. Não limpa as informações exibidas na tela. Somente acumulam resultados de várias pesquisas.
+
+Solução: Criar um botão de refresh, que limpa as informações quando o usuário desejar. (IMPLEMENTADO)
+
+2. O botão que processa as informações não dá nenhum sinal que o processo foi feito. O usuário não percebeu que o site já estava retornando o resultado.
+ 
+Solução: Inserir um efeito no botão, que mude quando ele for clicado. Cor ou sombra.
+
 ## 6. Ferramentas utilizadas
 
 1. Vanilla JS

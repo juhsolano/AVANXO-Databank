@@ -36,26 +36,36 @@ body{
 }
 
 /*INTRO - ABOUT US*/
-.about-us {
+.aboutus-title {
     background-color: #49736A;
     font-family: 'Fjalla One', sans-serif;
+    color: #8EBFB4;
     margin: auto;
-    padding: 2%;
+    padding: 2% 2% 0 2%;
+}
+
+.aboutus-text {
+    background-color: #49736A;
+    font-family: 'PT-sans', sans-serif;
+    font-size: 80%;
+    color:#8EBFB4;
+    text-align: justify;
+    margin: auto;
+    padding: 1% 2% 2% 2%;
 }
 
 h2 {
     background-color:#C2AE8C;
     font-family: 'Fjalla One', sans-serif;
+    color: #49736A;
     margin: auto;
-    padding: 2%;
-    
+    padding: 2% 0 0 2%;
 }
 
 /*CARDS HEADER*/
 .card-title {
     font-family: 'Fjalla One', sans-serif;
     font-size: 120%;
-
 }
 
 /*SECTIONS DOS INPUTS*/
@@ -71,7 +81,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    
 }
 
 .country-options {
@@ -82,7 +91,6 @@ h2 {
     margin: 2%;
     padding: 2%;
     flex: 1;
-
 }
 
 .country-icon {
@@ -102,7 +110,6 @@ h2 {
     margin: 2%;
     flex: 3;
     padding: 2% 0.5% 2% 2%;
-
 }
 
 .select-bar{
@@ -126,76 +133,78 @@ h2 {
     width: 90%;
     margin: auto;
     justify-content: center;
-    
 }
 
 .data-processing {
     background-color: #FF765E;
+    margin: 3px;
     font-family: 'Fjalla One', sans-serif;
     width: 110px;
     height: 20px;
     font-size: 90%;
     border-radius: 5px;
-            
+}
+
+.data-processing:active {
+    background-color: #49736A;
 }
 
 /*AREA DO RESULTADO*/
 .print-area {
-    padding: 1px;
+    background-color: #C2AE8C;
     display: flex;
-    margin: auto;
-    
+    padding: 20px;
 }
 
 .result-text {
     background-color:#8EBFB4 ;
-    width:90%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 110%;
+    width:100%;
     margin: auto;
     border-radius: 5px;
-    padding: 1%;
-}
-
-.result {
-    font-family: 'PT Sans', sans-serif;
-    
-}
-
-/*AREA DO SORT/CÁLCULO*/
-.sort-area{
-    background-color: #C2AE8C;
-    width: 90%;
-    margin: auto;
-    display: flex;
     padding: 2%;
-    justify-content: center;
-   
 }
 
-.calculus-container{
+/*FOOTER*/
+.home-local{
+    color: #C2AE8C;
+}
+
+.socialnet-container{
     background-color: #49736A;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 100%;
+    color: #8EBFB4;
+    width: 90%;
     margin: auto;
     padding: 10px;
     display: flex;
+    align-items: center;
     flex-flow: column;
-    border-radius: 5px;
-    
+
 }
 
-.calculus-title {
-    font-family: 'Fjalla One', sans-serif;
-    margin: 1% 1% 3% 1%;
-}
-
-
-.select-bar2 {
-    width: 70%;
-    margin: 1% 1% 3% 1%;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
 }
 
 /*BREAKPOINTS*/
 @media only screen and (min-width: 576px){
     .show-options{
         flex-direction: row;
+    }
+    
+    .social-icon{
+        width: 60px;
+        height: 60px;
+        margin: 15px;
+    }
+
+    .socialnet-container{
+        font-size: 120%
     }
 }
 
