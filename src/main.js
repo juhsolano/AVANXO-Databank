@@ -47,4 +47,3 @@ function showCalculations(arrayMeans) {
             </div>`;
   }).join("")}`;
 };
-
