@@ -2,7 +2,9 @@ window.data = {
   userChoiceMap: userChoiceMap,
   takingValueFromArray: takingValueFromArray,
   takingValues: takingValues,
-  average: average
+  average: average,
+  orderingValues: orderingValues,
+  sortData: sortData
 };
 
 function userChoiceMap(arrayCountry, worldbankObject, indicatorString) {
@@ -26,3 +28,22 @@ function average(arrayValues) {
   return calculus;
 };
 
+function orderingValues(arrayData, arrayResult) {
+  const arrayCountry = arrayData.map(country => country[0].countryName);
+  const arrayValues = arrayCountry.map((country, value) => {
+    return { key1: country, key2: arrayResult[value] };
+  });
+  return arrayValues;
+};
+
+function sortData(arrayMeans) {
+  return arrayMeans.sort(function (a, b) {
+    if (a.key2 > b.key2) {
+      return 1;
+    }
+    if (a.key2 < b.key2) {
+      return -1;
+    }
+    return 0;
+  });
+}

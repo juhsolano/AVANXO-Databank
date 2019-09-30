@@ -121,57 +121,91 @@ describe("function average", () => {
   });
 });
 
+describe("function taking values from array", () => {
+  it("is a function", () => {
+    expect(typeof window.data.takingValueFromArray).toBe("function");
+  });
+});
 
-// describe("function taking values from array", () => {
-//   it("is a function", () => {
-//     expect(typeof window.data.takingValueFromArray).toBe("function");
-//   });
-// });
+describe("function taking values", () => {
+  it("is a function", () => {
+    expect(typeof window.data.takingValues).toBe("function");
+  });
+});
 
-// describe("function taking values", () => {
-//   it("is a function", () => {
-//     expect(typeof window.data.takingValues).toBe("function");
-//   });
+describe("function order values", () => {
+  it("is a function", () => {
+    expect(typeof window.data.orderingValues).toBe("function");
+  });
 
-// it("average calculation", () => {
-//   expect(window.data.average([[{
-//     "data": {
-//       "2010": 54.82080078125,
-//       "2011": 52.3019981384277,
-//       "2012": 51.7058982849121,
-//       "2013": 51.1726989746094,
-//       "2014": 48.8818016052246,
-//       "2015": 46.7711982727051,
-//       "2016": 45.850399017334,
-//       "2017": 47.2914009094238
-//     },
-//     "countryName": "Perú",
-//     "countryCode": "PER",
-//     "indicatorName": "Fuerza laboral con educación básica (% del total)",
-//     "indicatorCode": "SL.TLF.BASC.ZS"
-//   }], 
-//   [{
-//     "data": {
-//       "2010": 38.4758987426758,
-//       "2011": 38.9410018920898,
-//       "2012": 39.905200958252,
-//       "2013": 39.9612998962402,
-//       "2014": 38.8889999389648,
-//       "2015": 39.3418006896973,
-//       "2016": 39.2219009399414,
-//       "2017": 38.6375999450684,
-//     },
-//     "countryName": "México",
-//     "countryCode": "MEX",
-//     "indicatorName": "Fuerza laboral con educación básica (% del total)",
-//     "indicatorCode": "SL.TLF.BASC.ZS"
-//   }
-//   ]],
-//   [ "2015", "2016", "2017" ]  
-//   )).toEqual(
-//     [
-//       [ 39.3418006896973, 39.2219009399414, 38.6375999450684 ], 
-//       [ 46.7711982727051, 45.850399017334, 47.2914009094238 ]
-//     ]);
-// });
-// });
+  it("order values", () => {
+    expect(window.data.orderingValues(
+      [
+        [
+          {
+            countryCode: "MEX",
+            countryName: "México",
+            data: {
+              2012: 39.905200958252,
+              2013: 39.9612998962402,
+              2014: 38.8889999389648,
+              2015: 39.3418006896973,
+              2016: 39.2219009399414,
+              2017: 38.6375999450684
+            },
+            indicatorCode: "SL.TLF.BASC.ZS",
+            indicatorName: "Fuerza laboral con educación básica (% del total)"
+          }],
+        [
+          {
+            countryCode: "PER",
+            countryName: "Perú",
+            data: {
+              2012: 51.7058982849121,
+              2013: 51.1726989746094,
+              2014: 48.8818016052246,
+              2015: 46.7711982727051,
+              2016: 45.850399017334,
+              2017: 47.2914009094238
+            },
+            indicatorCode: "SL.TLF.BASC.ZS",
+            indicatorName: "Fuerza laboral con educación básica (% del total)"
+          }
+        ]
+      ]
+    )).toEqual(
+      [
+        {
+          key1: "México",
+          key2: 39.32613372802735
+        },
+        {
+          key1: "Perú",
+          key2: 48.61223284403483
+        }
+      ]);
+  });
+});
+
+describe("function order data", () => {
+  it("is a function", () => {
+    expect(typeof window.data.sortData).toBe("function");
+  });
+
+  it("order data", () => {
+    expect(window.data.sortData(
+      [
+        { key1: "Brasil", key2: 43.134 },
+        { key1: "Chile", key2: 35.595 },
+        { key1: "México", key2: 39.326 },
+        { key1: "Perú", key2: 48.612 }
+      ]
+    )).toEqual(
+      [
+        { key1: "Chile", key2: 35.595 },
+        { key1: "México", key2: 39.326 },
+        { key1: "Brasil", key2: 43.134 },
+        { key1: "Perú", key2: 48.612 }
+      ]);
+  });
+});
