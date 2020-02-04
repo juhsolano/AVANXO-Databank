@@ -1,3 +1,5 @@
+//passa o evento como parâmetro
+//function processingInput(evento){}
 function processingInput() {
   event.preventDefault();
   const chosenCountry = document.getElementsByName("select-country");
